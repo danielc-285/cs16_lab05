@@ -88,7 +88,7 @@ string dec2bh(string sdec, char bh){
         dec_value = stoi(sdec);
         for(int i = exp_count; i >= 0; i--){
             char hex_value;
-            if(dec_value / static_cast<int>(pow(16,i)) != 0){
+            if(dec_value / static_cast<int>(pow(16,i)) != 0 || i == 0){
                 
                 int hex_value_int = dec_value / static_cast<int>(pow(16,i));
                 hex_value = hex_value_int;
